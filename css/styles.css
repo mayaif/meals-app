@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* img {
-  width: 450px;
-  height: 300px;
-} */
+
 
 .meal-not-found{
     grid-template-columns: 1fr!important;

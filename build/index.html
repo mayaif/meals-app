@@ -7,32 +7,41 @@
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
-<body id="root" class="bg-gray-100">
-  <nav class="flex justify-center gap-6 lg:justify-end bg-orange-500 p-4 font-medium text-slate-50 mb-10">
-    <a href="#/">Home</a>
-    <a href="#/about">About</a>
-    <a href="#/favorites">Favorites</a>
-    <a href="#/contact">Contact</a>
+<body id="root" class="bg-gray-50">
+  <nav class="flex justify-center gap-6 lg:justify-end bg-transparent shadow-sm py-3 px-10 font-medium text-slate-700 mb-10">
+    <a href="#/" class="hover:text-orange-500">Home</a>
+    <a href="#/about" class="hover:text-orange-500">About</a>
+    <a href="#/favorites" class="hover:text-orange-500">Favorites</a>
+    <a href="#/contact" class="hover:text-orange-500">Contact</a>
   </nav>
-  <div class="container mx-auto px-10 mb-8"> 
+  <main class="container mx-auto px-10 mb-8">
+    <!-- <img src="./images/bg-corner.jpg" alt="fruits" class="rounded-full w-28 h-28"> 
+    <img src="./images/food.jpg" alt="fruits" class="rounded-full w-28 h-28 ml-auto"> -->
     <div class="grid justify-center align-middle">
-      <h1 class="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-lime-500 to-orange-500 font-sans my-8 text-center">Find Your Meal</h1>
-      <blockquote class="mb-10 text-sm text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-slate-900">Embark on a gastronomic adventure!<br> Enter your favorite ingredient and meal suggestions will appear below<br>
-      </blockquote>
+      
+      <h1 class="font-extrabold text-transparent text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-rose-300 to-orange-400 font-sans my-6 text-center hover:text-orange-400">
+        Find Your Meal
+      </h1>
+      <div class="mb-10 text-sm text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900">
+        <p class="hover:text-slate-800">Embark on a gastronomic adventure!</p>
+        <p class="hover:text-slate-800">Enter your favorite ingredient and meal suggestions will appear below</p>
+      </div>
       <div class="flex mb-5">
         <input 
           type="text" 
           placeholder="Enter an ingredient..." 
           id="search-input" 
-          class="placeholder:italic placeholder:text-slate-400 block bg-white w-full lg:w-96 border border-orange-400 rounded-r-none rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-orange-500 focus:ring-1"
+          class="placeholder:italic placeholder:text-slate-400 block bg-white w-full lg:w-96 border border-r-transparent border-rose-200 rounded-r-none rounded-full 
+            py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-rose-300 focus:ring-1"
         >
         <button 
-          class="border bg-orange-500 text-slate-100 font-medium text-md px-4 py-1 border-orange-400 focus:outline-none focus:border-orange-500 focus:ring-1 rounded-s-none rounded-full shadow-sm" 
-          type="button" 
+          class="border border-l-transparent border-rose-300 bg-rose-300 text-slate-100 font-medium text-md px-3 py-1  focus:outline-none focus:border-rose-300 focus:ring-1 rounded-s-none rounded-full shadow-sm" 
+          type="submit" 
           id="search-btn" 
           title="Check"
         >
-          Search
+        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <span class="sr-only">Search</span>
         </button>
       </div>
     </div>
@@ -44,15 +53,17 @@
     <div id="meal-details" 
       class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 h-4/5 p-7 mt-10
         overflow-y-scroll bg-gradient-to-r from-rose-200 to-orange-200 shadow-lg rounded-lg">
-      <button id="close-btn" class="py-1 px-3 rounded-full bg-white font-bold text-red-700 text-sm text-right shadow-lg">X</button>
+      <button 
+        id="close-btn" 
+        class="py-1 px-3 rounded-full bg-white font-bold text-red-700 text-sm text-right shadow-lg">
+        X
+      </button>
       <div id="meal-content" class="relative text-slate-900 leading-7 md:leading-7">
       </div>
     </div>  
-  </div>
+  </main>
  
-
-
   <script type="module" src="app.js"></script>
-
+ 
 </body>
 </html>

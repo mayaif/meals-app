@@ -33,8 +33,10 @@ function getMealList() {
                 >
               </div>
               <div class="block">
-                <h3 class="font-medium text-sm text-slate-800 my-5 lg:text-base">${meal.strMeal}</h3>
-                <div class="flex justify-center align-middle rounded-full bg-orange-500 hover:bg-orange-600 py-2 px-7 text-slate-100 font-medium text-center lg:w-44 lg:mx-auto">
+                <h3 class="font-bold text-transparent text-lg bg-clip-text bg-gradient-to-r from-slate-500 to-slate-900 my-5">
+                  ${meal.strMeal}
+                </h3>
+                <div class="recipe-btn flex justify-center align-middle rounded-full bg-orange-500 opacity-90 hover:bg-orange-600 py-2 px-7 mx-2 text-slate-100 font-medium text-center lg:w-44 lg:mx-auto">
                   <a href="#" class="recipe-btn">
                     Get Recipe
                   </a>
@@ -68,14 +70,16 @@ function recipeModal(meal) {
   meal = meal[0]
   let html = `
   
-    <h3 class="font-bold text-xl text-slate-500 my-5 lg:text-base">${meal.strMeal}</h3>
-    <div class="flex justify-between my-5 mx-5 gap-5 text-sm font-medium">
+    <h3 class="font-bold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-slate-500 to-slate-900 my-5 py-5 lg:text-5xl">
+      ${meal.strMeal}
+    </h3>
+    <div class="flex gap-5 my-5 text-sm font-extrabold text-orange-500 opacity-80">
       <p class="">Category: ${meal.strCategory}</p>
       <p class="">Style: ${meal.strArea}</p>
     </div>
     
     <div class="">
-      <h3 class="text-md font-medium my-5">Instructions:</h3>
+      <h3 class="text-md font-bold my-5 text-slate-700">Instructions:</h3>
       <p class="text-sm leading-8 md:leading-8 my-5">${meal.strInstructions}</p>
     </div>
     
